@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Jobs;
+namespace App\Jobs\Tenancy;
 
-use App\Jobs\Tenancy\DeleteDatabaseJob;
 use Stancl\Tenancy\Database\DatabaseManager;
 use Stancl\Tenancy\Jobs\CreateDatabase;
 

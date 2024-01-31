@@ -23,11 +23,23 @@ class DatabaseSeeder extends Seeder
 
         }else{
 
-            $tenant = Tenant::query()->create(['id' => 'foo']);
-            $tenant->domains()->create(['domain' => 'foo.localhost']);
+            $tenant = Tenant::query()->create([
+                'id' => 'monica',
+                'name' => 'Monica',
+                'logo' => 'https://fakeimg.pl/170x170',
+                'color' => 'blue',
+                'from' => 'monica@email.com'
+            ]);
+            $tenant->domains()->create(['domain' => 'monica.localhost']);
 
-            $tenant = Tenant::query()->create(['id' => 'bar']);
-            $tenant->domains()->create(['domain' => 'bar.localhost']);
+            $tenant = Tenant::query()->create([
+                'id' => 'jonatas',
+                'name' => 'Jonatas',
+                'logo' => 'https://fakeimg.pl/170x170/7a3838/909090',
+                'color' => 'gray',
+                'from' => 'jonatas@email.com'
+            ]);
+            $tenant->domains()->create(['domain' => 'jonatas.localhost']);
         }
 
     }
